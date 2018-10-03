@@ -1,1 +1,70 @@
-# alg
+#include <iostream>
+#include <cstdio>
+#include <math.h>
+#include <algorithm>
+
+using namespace std;
+
+int main()
+{
+    std::ios::sync_with_stdio(false);
+    int n=5;
+    string nazwa;
+    float p;
+    int d;
+    int f[5];
+    for(int i=1; i<=n; i++)
+    {
+        if(i==1)
+        {
+            nazwa="Opel Antara";
+            p=1234.65;
+            d=12;
+            cout<<nazwa<<endl;
+            cout<<p<<" "<<d<<endl;
+            f[0]=round(p*10000/(d*2.54*3.14));
+        }
+        if(i==2)
+        {
+            nazwa="Toyota Auris";
+            p=3509.57;
+            d=20;
+            cout<<nazwa<<endl;
+            cout<<p<<" "<<d<<endl;
+            f[1]=round(p*10000/(d*2.54*3.14));
+        }
+        if(i==3)
+        {
+            nazwa="Citroen C5";
+            p=9990.8;
+            d=40;
+            cout<<nazwa<<endl;
+            cout<<p<<" "<<d<<endl;
+            f[2]=round(p*10000/(d*2.54*3.14));
+        }
+        if(i==4)
+        {
+            nazwa="Kia Sportage";
+            p=99999.12;
+            d=400;
+            cout<<nazwa<<endl;
+            cout<<p<<" "<<d<<endl;
+            f[3]=round(p*10000/(d*2.54*3.14));
+        }
+        if(i==5)
+        {
+            nazwa="Fiat Panda";
+            p=3525.74;
+            d=33;
+            cout<<nazwa<<endl;
+            cout<<p<<" "<<d<<endl;
+            f[4]=round(p*10000/(d*2.54*3.14));
+        }
+    }
+    sort(f, f+5);
+    for(int j=0; j<3; j++)
+    {
+        cout<<f[j]<<endl;
+    }
+    return 0;
+}
